@@ -63,13 +63,13 @@ def livre(request):
     # Cette méthode renvoie False s'il n'y a pas de données 
     # dans le formulaire ou qu'il contient des erreurs.
     if form.is_valid(): 
-        livre=Livre()
+        
         # Ici nous pouvons traiter les données du formulaire
-        livre.titre = form.cleaned_data['titre']
-        livre.auteur = form.cleaned_data['auteur']
-        livre.resume = form.cleaned_data['resume']
-        livre.date = form.cleaned_data['date']
-        livre.photo = form.cleaned_data["photo"]
+        titre = form.cleaned_data['titre']
+        auteur = form.cleaned_data['auteur']
+        resume = form.cleaned_data['resume']
+        date = form.cleaned_data['date']
+        photo = form.cleaned_data["photo"]
         sauvegarde = True
 
         # Nous pourrions ici envoyer l'e-mail grâce aux données 

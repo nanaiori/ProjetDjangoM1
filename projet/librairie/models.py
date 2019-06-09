@@ -4,6 +4,7 @@ from datetime import datetime
 
 # Create your models here.
 
+
 class Livre(models.Model):
     titre = models.CharField(max_length=100)
     auteur = models.CharField(max_length=42)
@@ -11,9 +12,12 @@ class Livre(models.Model):
     date = models.DateTimeField(default=timezone.now, 
                                 verbose_name="Date de parution")
     categorie = models.ForeignKey('Categorie', on_delete=models.CASCADE)
+    photo = models.ImageField(upload_to="photos/")
+    
 
     
     class Meta:
+        
         verbose_name = "livre"
         ordering = ['date']
         
