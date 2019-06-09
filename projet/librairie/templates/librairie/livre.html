@@ -1,0 +1,10 @@
+{% if sauvegarde %}
+    <p>livre a bien été enregistré.</p>
+{% endif %}
+
+  <form method="post" enctype="multipart/form-data" action=".">
+       {% csrf_token %}
+    {{ form.as_p }} <br/>
+    
+    <input type="submit" value="Submit" />
+</form>

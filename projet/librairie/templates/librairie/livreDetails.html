@@ -1,0 +1,4 @@
+<h1>{{ livre.titre }} <span class="small">dans {{ livre.categorie.nom }}</span></h1>
+<p class="infos">Rédigé par {{ livre.auteur }}, le {{ livre.date|date:"DATE_FORMAT" }}</p>
+<div class="resume">{{ livre.resume|linebreaks }}</div>
+<img src="{{ contact.photo.url }}"/>
